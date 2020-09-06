@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+	<meta charset="UTF-8">
+	<title>문서 제목</title>	
+	<style>
+		#s{width: 100px;height: 100px;background:skyblue;
+			
+		}
+	</style>
+
+	<script>
+		function createDiv(){
+			var obj = document.getElementsBytagName("body")[0];
+			var newDiv = document.createElement("div");
+			newDiv.innerHtml = "안녕";
+			newDiv.setAttribute("div","my")
+			obj.appendChild(newDiv);
+		}
+	</script>
+</head>
+<body>
+	<div>송예슬</div>
+	<button type="button" onclick="createDiv()">생성</button>
+</body>
+</html>

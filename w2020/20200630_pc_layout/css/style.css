@@ -1,0 +1,65 @@
+@charset "utf-8";
+
+/*main_header*/
+#main_header{width: 960px; height: 130px;
+ margin: 0 auto; _border: 1px solid #000;
+position: relative; margin-bottom: 20px;}
+
+	#logo{position: absolute;top: 20px;left: 10px;}
+
+	/*util_menu*/
+	#util_menu{position: absolute;right: 0;top: 0;}
+	#util_menu>ul>li{float:left;}
+	#util_menu>ul>li>a{display: block; padding: 2px 10px;
+	border: 1px solid #000; border-right:0 none;}
+	#util_menu>ul>li:last-child>a{border-right: 1px solid #000;
+	border-radius:0 10px 10px 0;}
+	#util_menu>ul>li:first-child>a{border-radius:10px 0 0 10px;}
+	#util_menu>ul>li>a:hover{background:skyblue;}
+	
+	/*main_menu*/
+	#main_menu{position: absolute;bottom: 0;width: 100%;}
+	#main_menu>ul>li{float:left; width: 20%; border: 1px solid #000;
+	border-right: 0 none; transition:0.3s;} 
+	#main_menu>ul>li:last-child{border-right: 1px solid #000;
+	 border-radius:0px 10px 10px 0px;}
+	 #main_menu>ul>li:first-child{border-radius:10px 0px 0px 10px;}
+	 #main_menu>ul>li:hover{background:skyblue;}
+	#main_menu>ul>li>a{text-align: center;display: block;
+		line-height: 40px;}
+
+/*content*/
+#content{width: 960px;margin: 0 auto;}
+	#main_section{width: 750px;float:left;}
+	#main_section>.main_article{padding: 20px;border: 1px solid #000;
+	margin-bottom: 10px;}
+	#main_aside{width: 200px;height: 200px;
+		float:right; /*background:pink;*/}
+
+	#main_aside .buttons>label{display: block; float:left; 
+		width: 100px;height: 30px; line-height: 30px;
+		text-align: center; cursor:pointer; background:pink;
+		border-radius:10px 10px 0 0;}
+
+	.inp:nth-child(1):checked ~ div.buttons > 
+	label:first-child{background-color:skyblue !important;}
+	.inp:nth-child(2):checked ~ div.buttons > 
+	label:last-child{background-color:skyblue !important;}
+	.inp:nth-child(1),.inp:nth-child(2){display: none;}
+	.inp:nth-child(1):checked ~ div.tad_items1{display: block;}
+	.inp:nth-child(1) ~ div.tad_items1{display:none;}
+	.inp:nth-child(2):checked ~ div.tad_items2{display: block;}
+	.inp:nth-child(2) ~ div.tad_items2{display:none;}
+
+	.item{padding: 10px; border: 1px solid #000; border-top:0 none; }
+	.th{float:left;}
+	.des{float:left; margin-left: 10px;}
+
+	.des>strong{width: 120px;display: block; 
+		white-space:nowrap;
+		text-overflow:ellipsis; /*-> 글자....나옴*/ /*clip 글자가 없어짐*/
+		overflow:hidden;}
+/*main_footer*/
+#main_footer{width: 960px;margin: 0 auto; text-align: center;
+border: 1px solid #000; padding: 10px 0;}
+address{font-style:normal;}

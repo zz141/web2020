@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+	<meta charset="UTF-8">
+	<title>colorbox</title>
+	<link rel="stylesheet" href="../css/reset.css">
+	<link rel="stylesheet" href="css/colorbox.css">
+	<script src="js/jquery-3.1.1.min.js"></script>
+	<script src="js/jquery.colorbox-min.js"></script>
+	<script>
+		$(document).ready(function(){
+			$(".modal").colorbox({rel:"modal"});
+			$(".youtube").colorbox({
+				iframe:true,
+				innerWidth:600,
+				innerHeight:337,
+			});
+		});
+	</script>
+	<style>
+		ul.view{width: 1000px; margin: 0 auto;}
+		ul.view>li{float:left; width: 25%;}
+		ul.view>li img{width: 100%;}
+	</style>
+</head>
+<body>
+	<ul class="view">
+		<li>
+			<a href="https://www.youtube.com/embed/-vXTTaHr44w" class="youtube" title="앵무앵무">
+				<img src="../images/img1.jpg" alt="" >
+			</a>
+		</li>
+		<li>
+			<a href="../images/img2.jpg" class="modal" title="장미장미">
+				<img src="../images/img2.jpg" alt="">
+			</a>
+		</li>
+		<li>
+			<a href="../images/img3.jpg" class="modal" title="오리오리">
+				<img src="../images/img3.jpg" alt="">
+			</a>
+		</li>
+		<li>
+			<a href="../images/img4.jpg" class="modal" title="킹킹~">
+				<img src="../images/img4.jpg" alt="">
+			</a>
+		</li>
+	</ul>
+</body>
+</html>
+
+<!-- <iframe width="560" height="315" src="https://www.youtube.com/embed/-vXTTaHr44w" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe> -->

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+	<!-- meta:vp -->
+	<title>media</title>
+	<link rel="stylesheet" href="../css/reset.css">
+	<style>  /*맥스(최대) 민(최소) */
+		ul>li{float:left; width: 16.66%;}
+		ul>li img{width: 100%;}
+
+		@media screen and (max-width:576px){   /*mobile*/
+			ul>li{float:left; width: 50%;}
+		}  /*최대576보다 작으면  ul>li{float:left; width: 50%;} 적용*/
+
+		@media screen and (min-width:577px) and (max-width:992px){    /*tablet*/
+			ul>li{float:left; width: 33.33333%;}
+		}/*577~992까지는 ul>li{float:left; width: 33.33333%;} 적용*/
+		@media screen and (min-width:923px){   /*pc*/
+			ul>li{float:left; width: 20%;}
+			.blind{display:none;}
+		}/*최소 923(이상이면)보다 크면 ul>li{float:left; width: 20%;}(923부터 적용)
+			.blind{display:none;} 적용*/
+	</style>
+</head>
+<body>
+	<ul class="clearfix">
+		<li><img src="../images/testimg.jpg" alt=""></li>
+		<li><img src="../images/testimg.jpg" alt=""></li>
+		<li><img src="../images/testimg.jpg" alt=""></li>
+		<li><img src="../images/testimg.jpg" alt=""></li>
+		<li><img src="../images/testimg.jpg" alt=""></li>
+		<li class="blind"><img src="../images/testimg.jpg" alt=""></li>
+	</ul>
+
+	
+	<!-- <style>
+		.box{width: 200px;height: 400px; background:skyblue;}
+		.box img{min-width:100%;}
+	</style>
+
+	<div class="box">
+		<img src="../images/testimg.jpg" alt="">
+	</div> -->
+</body>
+</html>

@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+	<link rel="stylesheet" href="../css/reset.css">
+	<style>
+		.wrapper{width:100vw;height:150px;
+			/*height: 100vh;*/background:skyblue;
+			display:flex;  /*완쪽정렬*/
+/*			align-items:stretch; wrapper(div)에 height가 없으면 wrapper 전체크기만큼 채워줌*/
+/*			align-items:flex-end; 처음에는 위에서 정렬로 시작하는데 아래(하단)으로 이동시킴*/
+			/*align-items:center; 처음에는 위에서 정렬로 시작하는데 중앙(센터)로 이동시킴*/
+			justify-content:space-between;   /*//전체 크기에서 각자 정렬해서 끝과끝으로 div가 이동함*/
+			}
+		.wrapper div{width: 100px;height: 100px;}
+		div.box1{background:gray;width: 50px;height: 50px;}
+		div.box2{background:pink;}
+		div.box3{background:orange;}
+		div.box4{background:red;}
+		div.box5{background:green;}
+	</style>
+</head>
+<body>
+	<div class="wrapper">
+		<div class="box1">1</div>
+		<div class="box2">2</div>
+		<div class="box3">3</div>
+		<div class="box4">4</div>
+		<div class="box5">5</div>
+	</div>
+
+
+	<style>
+		.flex{width: 100vw;height:50vh;
+			display:flex; /*완쪽정렬*/
+			background:yellow}
+		.flex div{flex-grow:1;  /*flex(100vh)값에 각자 1씩 5/1씩 나누어 가진다는 뜻*/
+			display:flex;  /*완쪽정렬*/
+			justify-content:center;  /*div에 작성한 갑(1~5 숫자)을 상단에서 가운데로 정렬*/
+			align-items:center;     /*div에 작성한 갑(1~5 숫자)을 중앙 가운데로 정렬*/
+			transition:0.3s;
+		}
+		div.cell1{background:gray;}
+		div.cell2{background:pink;}
+		div.cell3{background:orange;}
+		div.cell4{background:red;}
+		div.cell5{background:green;}
+		.flex div:hover{flex-grow:3;}
+
+
+
+		.wrap{background: #ddd;padding-top: 20px;}
+		.wrap>h2{text-align: center;}
+		.comtainer{width: 1000px;margin: 0 auto;
+			display:flex; /*완쪽정렬*/
+			justify-content:space-between; /*전체 크기에서 각자 정렬해서 끝과끝으로 div가 이동함*/
+			padding: 20px 0;}
+		.comtainer div{width: 240px;border: 1px solid #000;padding: 20px;}
+		.comtainer div h2{margin-bottom: 10px;}
+		.comtainer div p{font-size:0.5em}
+
+
+		.nav{width: 100vw;background:skyblue;}
+		.nav ul{width: 1000px;margin: 0 auto;
+			display:flex;}
+		.nav ul li{flex:1; /*ul에 width 1000px에 li가 하나씩 6/1로 나누어 들어감(li가 5개면 5/1)*/
+			text-align: center; height: 40px;
+			border: 1px solid #000;}
+		.nav ul li a{display: block;line-height: 40px;}
+	</style>
+
+	<div class="flex">
+		<div class="cell1">1</div>
+		<div class="cell2">2</div>
+		<div class="cell3">3</div>
+		<div class="cell4">4</div>
+		<div class="cell5">5</div>
+	</div>
+	<div class="wrap">
+		<h2>song</h2>
+		<div class="comtainer">
+			<div>
+				<h2>Lorem, ipsum.</h2>
+				<p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Corrupti, iusto.</p>
+			</div>
+			<div>
+				<h2>Lorem, ipsum.</h2>
+				<p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Corrupti, iusto.</p>
+			</div>
+			<div>
+				<h2>Lorem, ipsum.</h2>
+				<p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Corrupti, iusto.</p>
+			</div>
+			<div>
+				<h2>Lorem, ipsum.</h2>
+				<p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Corrupti, iusto.</p>
+			</div>
+		</div>
+	</div>
+
+	<div class="nav">
+		<ul>
+			<li><a href="#">menu1</a></li>
+			<li><a href="#">menu2</a></li>
+			<li><a href="#">menu3</a></li>
+			<li><a href="#">menu4</a></li>
+			<li><a href="#">menu5</a></li>
+			<li><a href="#">menu6</a></li>
+		</ul>
+	</div>
+</body>
+</html>

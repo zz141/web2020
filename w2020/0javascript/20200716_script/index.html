@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+	<meta charset="UTF-8">
+	<title>array</title>
+</head>
+<body>
+	<script>
+		var x = 5;
+		var arr = [100,"seoul",true,x];
+		function printArr(){
+		for(var i=0;i<arr.length;i++){
+			document.write(arr[i] + "<br>");
+			}
+		}
+		printArr();
+	</script>
+
+	<script>
+		var arrSum = [10,20,30,40," + ","50"," = ","150"];
+		function printArrSum(){
+		var sum = 0;
+		for(var i=0;i<arrSum.length;i++){
+			sum += arrSum[i]; // sum = sum + arrSum[i]
+			}
+			return sum;
+		}
+		var result = printArrSum();
+		document.write(result)
+		
+		// document.write(sum)
+	</script>
+
+	<script>
+		 var kdata = ["제주도","부산","전주","속초"];
+		 function pArr(voluex){
+		 	document.write(voluex);
+		 }
+
+		 kdata.forEach(pArr);
+
+		 var data = [1,2,3,4,5,6,7,8,9,10];
+		 var sum = 0;
+
+		 function addData(volue){
+		 	sum += value;
+		 }
+
+		 data.forEach(addData)
+		 document.write(sum)
+	</script>
+</body>
+</html>

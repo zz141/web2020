@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>flex</title>
+	<link rel="stylesheet" href="../css/reset.css">
+	<style>
+		ul{border: 2px solid #000;
+			display: flex;
+			justify-content: space-between;
+			height: 300px;
+			align-items: center
+		}
+		li{border: 1px solid #f00;width: 50px;height: 50px;}
+
+		.etc{background: skyblue;border: 1px solid #000;}
+
+
+	</style>
+</head>
+<body>
+	<!-- <ul class="clearfix">
+		<li>1</li>
+		<li>2</li>
+		<li>3</li>
+		<li>4</li>
+	</ul> -->
+
+	<ul class="flex">
+		<li>1</li>
+		<li>2</li>
+		<li>
+			<div class="etc">etc1</div>
+			<div class="etc">etc2</div>
+			
+		</li>
+		<li>4</li>
+		<li>5</li>
+	</ul>
+</body>
+</html>

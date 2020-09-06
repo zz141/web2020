@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+	<meta charset="UTF-8">
+	<title>animate</title>
+	<link rel="stylesheet" href="../css/reset.css">
+	<link rel="stylesheet" href="../css/animate.css">
+	<script src="../js.wow.js"></script>
+	<script>
+		new WOW().init();
+	</script>
+	<style>
+		/*body{background:url(../images/pc01.jpg)}*/
+		.box{width:500px; height: 130px;/*background-color:skyblue;*/
+			/*position: absolute;top: 50%;margin-top: -250px;
+			left: 50%;margin-left: -250px;*/ 
+			text-align: center;
+		}
+
+		.gap{height: 2000px;}
+		.wrap{background-color:#ddd; padding: 50px 0;}
+		.container{width: 1000px; margin: 0 auto;}
+		/*.container ul li{float:left;margin-right: 25px;width: 231.25px;
+			height: 231.25px; background-color:orange;}*/
+		.container ul li:last-child{margin-right: 0;}
+
+		.gray{background-color: #ddd;}
+		.cycle{border-radius:120px !important;}
+	</style>
+</head>
+<body>
+	<div class="box animated bounce">
+		<h1>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Necessitatibus, tempore?</h1>
+	</div>
+	
+	<div class="gap">
+		<div class="wrap gray wow">
+			<div class="container">
+				<ul class="clearfix">
+					<li class="cycle">lorem1</li>
+					<li>lorem1</li>
+					<li>lorem1</li>
+					<li>lorem1</li>
+				</ul>
+			</div>
+		</div>
+		<div class="gap"></div>
+			<div class="wrap">
+				<div class="container">
+					<ul class="clearfix">
+						<li>lorem1</li>
+						<li>lorem1</li>
+						<li>lorem1</li>
+						<li>lorem1</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+		<div class="wrap gray">
+			<div class="container">
+				<ul class="clearfix">
+					<li>토요일날	</li>
+					<li>맥주를</li>
+					<li>조질까요</li>
+					<li>마드모아젤?</li>
+				</ul>
+			</div>
+		</div>
+	</div>
+</body>
+</html>

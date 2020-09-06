@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+	<meta charset="UTF-8">
+	<title>문서 제목</title>
+	<link rel="stylesheet" href="../css/style.css">
+
+	<style>
+		body{background-image: url(../images/bg_grid.gif);}
+		.boxwrap{width: 410px;_height: 200px;}
+		.boxwrap .box1,
+		.boxwrap .box2 { 
+			width: 200px;height: 200px;background-color:skyblue; color:white;float:left;}
+
+		.boxwrap .box1{background-color:red;}
+		.boxwrap .box2{background-color:blue; }
+		.box3{height: 200px;background-color:pink; /*display:none;*/}
+		/*.boxwrap .clear{height: 10px; clear:both;}*/
+
+		/*.boxwrap:after{content:""; clear:both;display:block;}*/
+		.clearfix:after{content:""; clear:both;display:block;}
+		.box3:after{content:"입니다"; display: block;}
+		.box3:before{content:"핑크는"; display:block;}
+	</style>
+</head>
+<body>
+	<div class="boxwrap clearfix pink">
+		<div class="box1">1</div>
+		<div class="box2">2</div>
+		<!-- <div class="clear"></div> -->
+	</div>
+	<div class="box3">box3</div>
+
+
+
+	<style>
+		.pink{background-color:pink;}
+		.skyblue{background-color: skyblue;}
+		.red{background-color:red;}
+		.wrap1{width: 1000px;margin: 10px auto;}
+
+		.wrap1 .left, .wrap1 .right{width: 100px;height: 100px;}
+		.wrap1 .left{ float:left; }
+		.wrap1 .right{float:right;}
+	</style>
+
+	<h3>1.float</h3>
+	<div class="wrap1 red clearfix">
+		<div class="left pink">left</div>
+		<div class="right skyblue">right</div>
+	</div>
+	
+	<style>
+		.wrap2{width: 1000px;margin: 0 auto;}
+		.wrap2 li{float:left; width: 20%;}
+		.wrap2 li>a{display:block;
+			text-align: center;
+			line-height: 30px;}
+		.wrap2 li>a:hover{background-color:blue; color:white;}
+	</style>
+	<h3>2. float nav</h3>
+	<div class="wrap2 red ">
+		<ul class="clearfix">
+			<li><a href="#">menu1</a></li>
+			<li><a href="#">menu2</a></li>
+			<li><a href="#">menu3</a></li>
+			<li><a href="#">menu4</a></li>
+			<li><a href="#">menu5</a></li>
+		</ul>
+	</div>
+
+	<style>
+		.wrap3{width: 1000px;margin: 0 auto; }
+		.wrap3>h1{text-align: center; margin: 10px;}
+		.wrap3>ul.s>li{float:left; width: 20%;background-color:red; }
+		.wrap3>ul>li>a{display:block;
+			text-align: center;
+			border: 1px solid #000; 
+		    }
+		.wrap3>ul>li>a:hover{background-color:blue; color:white;}
+	</style>
+
+	<h3>3.header</h3>
+	<div class="wrap3">
+		<h1>LOGO</h1>
+		<ul class="s clearfix">
+			<li><a href="#">menu1</a></li>
+			<li><a href="#">menu2</a></li>
+			<li><a href="#">menu3</a></li>
+			<li><a href="#">menu4</a></li>
+			<li><a href="#">menu5</a></li>
+		</ul>
+	</div>
+	
+	
+	<style>
+		.wrap4{width: 1000px; margin: 0 auto;}
+		.wrap4> h1{text-align: center;}
+		.wrap4>ul>li{float:left;width: 20%;}
+		.wrap4>ul>li>a{}
+	</style>
+
+
+
+	<h3>4.float mainpage layout</h3>
+	<div class="wrap4">
+		<h1>logo</h1>
+	<ul class="ss">
+		<li><a href="#">menu1</a></li>
+		<li><a href="#">menu2</a></li>
+		<li><a href="#">menu3</a></li>
+		<li><a href="#">menu4</a></li>
+		<li><a href="#">menu5</a></li>
+	</ul>
+	</div>
+</body>
+</html>

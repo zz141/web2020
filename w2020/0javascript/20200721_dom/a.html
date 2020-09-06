@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+	<meta charset="UTF-8">
+	<title>문서 제목</title>
+</head>
+<body>
+	<script>
+		var name = "송송";
+		document.write("나" + name + "이다");
+	</script>
+	
+
+
+
+
+	<p id="song">송송이는 귀여워</p>
+	<button onclick="BTN()">버튼1</button>
+	<button onclick="BTN2()">버튼2</button>
+	<script>
+		var ye=document.getElementById("song");
+		function BTN(){
+			song.style.color="red";
+			song.style.backgroung="gray";
+			alert("색이 바뀌어쨔");
+		}
+		function BTN2(){
+			song.style.color="black";
+			song.style.backgroung="white";
+		}
+
+	</script>
+</body>
+</html>

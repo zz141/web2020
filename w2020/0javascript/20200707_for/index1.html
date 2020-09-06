@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+	<meta charset="UTF-8">
+	<title>문서 제목</title>
+	<script>
+		var a;
+		var b ="abcde"
+		document.write("b 개수는" + b.length+"<br>");
+
+		for(a=1; a<=b.length; a++){
+			document.write("<div class='box'>" + a + "</div>")
+		}
+	</script>
+	<style>
+	.box{width: 100px;height: 100px;display:block;}
+	.box:nth-child(2n){background:skyblue;}
+</style>
+</head>
+<body>
+	
+	<script>
+		var q;
+		for(q=1;q<=10;q++){
+				document.write("2 x" + q + "=" + (2*q)+"<br>");
+		}
+
+
+		var w,e;
+		for(w=2;w<=9;w++){
+			document.write("<div style=\"display:inline-block;width:150px\">")
+			document.write(w+"단 입니다."+"<br>")
+			for(e=1;e<=10;e++){
+				document.write(w + "x" + e + "="+(w*e)+"<br>")
+			}
+			document.write("</div>")
+		}
+	</script>
+</body>
+</html>

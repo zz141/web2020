@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+	<meta charset="UTF-8">
+	<title>문서 제목</title>
+	<script>
+	 function change(){
+	 	var span = document.getElementsBytagName("span")
+	 	for(var i=0;i<4;i++){
+	 		span[i].style.color = "blue"
+	 		document.getElementsBytagName("span")[i].style.color = "blue"
+	 	}
+	 }
+	</script>
+</head>
+<body>
+	<h3>
+		내가 좋아하는 과일
+		<button type="button" onclick="change()">누르세요</button>
+	</h3>
+	Lorem ipsum dolorit ame	 <span>사과</span>consectetur adipisicing elit. 
+	Nulla eos dolores, rerum deleniti illum <span>딸기</span>perspiciatis eveniet 
+	commodi veritatis atque quod quaerat nam quam beatae 
+	quos placeat, dolorem eligendi <span>수박</span>possimus laborum.
+</body>
+</html>

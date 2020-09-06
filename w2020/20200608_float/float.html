@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+	<meta charset="UTF-8">
+	<title>문서 제목</title>
+	 <style>
+	 	*{margin: 0;padding: 0;}
+	 	a:link,a:visited{color:black;text-align:none;}
+	/* 	li{list-style:none;}*/
+
+	 	body{background-image:url(../images/bg_grid.gif);}
+
+	 	div.wrap{width: 400px;height: 200px; background-color: #ff0000;}
+	 	div.wrap > div.box1{width: 200px;height: 200px; float:left; background-color: #ff0;}
+	 	div.wrap > div.box2{background-color: #00ffffff; width: 220px;height:100px;}
+	
+		 div.wrap > div.box3{background-color: #ffffff; width: 220px;height:100px;}
+
+	 	  /*div.wrap > div.clear{clear:both;}*/
+	 	 div.wrap:after{content:; display:block; clear:both;}
+	 	 
+	 </style>
+</head>
+<body>
+	<div class="wrap">
+		<div class="box1">text1</div>
+		<div class="box2">text2</div>
+		<!-- <div class="clear"></div> -->
+	</div>
+	<div class="box3">text2</div>
+
+</body>
+</html>

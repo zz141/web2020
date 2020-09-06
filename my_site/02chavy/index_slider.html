@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+	<meta charset="UTF-8">
+	<title>chavy</title>
+
+	<link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@600;700&display=swap" rel="stylesheet">
+
+	<link rel="stylesheet" href="css/reset.css">
+	<link rel="stylesheet" href="css/jquery.bxslider.css">
+	<script src="js/jquery-3.1.1.min.js"></script>
+	<script src="js/jquery.bxslider.js"></script>
+	<style>
+		body{font-family: 'Source Sans Pro', sans-serif;}
+		header#header{width: 1200px;height: 50px;;background:skyblue;margin: 0 auto;padding-top:10px;}
+		.box{
+			width: 100px;height: 10px;background:red;
+		}
+		.box1{
+			width: 100px;height: 10px;background:blue;
+			margin-top: 10px;
+		}
+		.visual .view{width: 1100px;position: relative;height: 700px;margin: 0 auto}
+		.visual .slider li{overflow: hidden;}
+		.visual .slider img.img{position: absolute;left:50%;}
+		.visual .visualTxt{position: absolute;top:150px;width: 500px;}
+		.visual .visualTxt h3{font-size:2.5em;margin-bottom:20px;}
+		.visual .visualTxt p{margin-bottom:30px;}
+		.visual .visualTxt a{display: block;width: 200px;height: 60px;background: #2c2c96; color:white;border-radius:40px;text-align: center;line-height: 60px;}
+.bx-wrapper {
+    -moz-box-shadow: none;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+    border: 0 none;
+    background: #fff;
+    margin-bottom:0;
+}
+.vColor{color:#2c2c96;}
+	</style>
+	<script>
+		$(document).ready(function(){
+			$(".slider").bxSlider({pager:false});
+		});
+
+	</script>
+
+</head>
+<body>
+	<header id="header">
+		<div class="box"></div>
+		<div class="box1"></div>
+	</header>
+	<div class="visual">
+		<ul class="slider">
+			<li> <!-- w 100% -->
+				<div class="view">
+					<img src="images/img.jpg" alt="" class="img">
+					<div class="visualTxt">
+						<h3>Lorem ipsum dolor sit amet, consectetur adipisicing.</h3>
+						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Animi quas eius ipsa eaque deserunt laudantium!</p>
+						<a href="#" class="btnA">Request Demo</a>
+					</div>
+				</div>
+			</li>
+			<li> <!-- w 100% -->
+				<div class="view">
+					<img src="images/img.jpg" alt="" class="img">
+					<div class="visualTxt">
+						<h3>Lorem ipsum dolor sit amet, consectetur adipisicing.</h3>
+						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Animi quas eius ipsa eaque deserunt laudantium!</p>
+						<a href="#" class="btnA">Request Demo</a>
+					</div>
+				</div>
+			</li>
+
+			<li> <!-- w 100% -->
+				<div class="view">
+					<img src="images/img.jpg" alt="" class="img">
+					<div class="visualTxt">
+						<h3>Lorem ipsum dolor sit amet, consectetur adipisicing.</h3>
+						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Animi quas eius ipsa eaque deserunt laudantium!</p>
+						<a href="#" class="btnA">Request Demo</a>
+					</div>
+				</div>
+			</li>
+			
+		</ul>
+		
+	</div>
+<style>
+	/*common*/
+	.bgColorOne{background:#f8f9ff;}
+	.fontColorOne{color:#2c2c96;}
+	.shadow{box-shadow: 0 0 15px #ddd;}
+	
+	.conOne,
+	.conTwo,
+	.conThree{width: 1200px;margin: 0 auto;}
+	
+	.conOne{
+		padding: 70px 0;
+		text-align: center;
+	}
+	.conOne h2{font-size:2.5em;margin-bottom:15px;}
+	
+
+
+	.conTwo{padding:100px 0;}
+	.conTwo .txtBox{
+		width: 410px;height: 510px;float: left;
+		padding-top:100px;
+	}
+	.conTwo .txtBox h2{font-size:2.5em;margin-bottom:15px;}
+	.conTwo .txtBox p{margin-bottom:30px;}
+	.conTwo .txtBox a{
+		display: block;width: 200px;line-height: 50px;
+		border-radius:25px;background:#2c2c96;color:#fff;
+		text-align: center;
+	}
+
+
+	.conTwo .iconBox{
+		width: 460px;height: 510px;float: right;
+		margin-right:100px;
+	}
+	.conTwo .iconBox li{
+		float: left;width: 210px;height: 230px;
+		_background:#eee;margin-bottom:40px;text-align: center;
+		padding-top:50px;transition: 0.3s;cursor:pointer;
+	}
+	.conTwo .iconBox li:hover{box-shadow: 0 0 15px #ddd;}
+	.conTwo .iconBox li:nth-child(1),
+	.conTwo .iconBox li:nth-child(3){margin-right: 40px;}
+	.conTwo .iconBox li img{margin-bottom:15px;}
+
+
+	.conThree{padding:255px 0;position: relative;}
+	.conThree .txtBox{
+		width: 410px;
+	}
+	.conThree .txtBox h2{font-size:2.5em;margin-bottom:15px;}
+	.conThree .txtBox p{margin-bottom:30px;}
+	.conThree .txtBox a{
+		display: block;width: 200px;line-height: 50px;
+		border-radius:25px;background:#2c2c96;color:#fff;
+		text-align: center;
+	}
+
+	.conThree img.img{position: absolute;right: 0;top: 110px;}
+
+	
+</style>
+	<div class="wrap bgColorOne"> <!-- 100% -->
+		<div class="conOne">  <!-- 1200 -->
+			<h2>Lorem ipsum dolor <span class="fontColorOne">sit amet, consectetur.</span></h3>
+			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dignissimos<br>debitis ut nihil minima labore. Magni.</p>
+		</div>
+	</div>
+	
+	<div class="conTwo clearfix">
+		<div class="txtBox">
+			<h2>Lorem ipsum dolor <span class="fontColorOne">sit amet, consectetur.</span></h3>
+			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dignissimosdebitis ut nihil minima labore. Magni.</p>
+			<a href="#" class="shadow">Lorem ipsum</a>
+		</div>
+		<div class="iconBox">
+			<ul class="clearfix">
+				<li>
+					<img src="images/icon01_01.jpg" alt="">
+					<p>Lorem<br>ipsum.</p>
+				</li>
+				<li>
+					<img src="images/icon01_02.jpg" alt="">
+					<p>Lorem<br>ipsum.</p>
+				</li>
+				<li>
+					<img src="images/icon01_03.jpg" alt="">
+					<p>Lorem<br>ipsum.</p>
+				</li>
+				<li>
+					<img src="images/icon01_04.jpg" alt="">
+					<p>Lorem<br>ipsum.</p>
+				</li>
+			</ul>
+		</div>
+	</div>
+	<div class="wrap bgColorOne">
+		<div class="conThree">
+			<div class="txtBox">
+				<h2>Lorem ipsum dolor <span class="fontColorOne">sit amet, consectetur.</span></h3>
+				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dignissimosdebitis ut nihil minima labore. Magni.</p>
+				<a href="#" class="shadow">Lorem ipsum</a>
+			</div>
+			<img src="images/img03_01.jpg" alt="" class="img">
+
+		</div> <!-- conThree -->
+		
+	</div> <!-- wrap -->
+
+</body>
+</html>

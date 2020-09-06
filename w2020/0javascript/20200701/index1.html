@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+	<meta charset="UTF-8">
+	<title>문서 제목</title>
+	<script>
+		var a = 500;
+
+		if(a==500){
+			document.write("코딩은 어렵다잉..ㅠㅠ" + "<br>")
+		}
+		if(a ==300){
+			document.write("코딩은 진짜 어렵당...ㅠㅠ")
+		}
+		// a가 500으로 지정해서 a==500일경우에 아래 글자가 보이게
+		// 지정해달라는 뜻임
+
+
+		function q(){
+			alert("안녕~")
+			document.write("방가방가")
+		}
+		
+		function v(){
+			alert("네이버로 이동합니다")
+			location.href="http://www.naver.com"
+		}
+	</script>
+</head>
+<body>
+	<a href="#" onclick="q();">클릭하시오</a>
+	<button type="button" onclick="q()">클릭</button><br>
+
+	<a href="#" onclick="v();">네이버로 이동</a>
+	<button type="button" onclick="v();">네이버로 이동</button>
+</body>
+</html>

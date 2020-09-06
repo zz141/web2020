@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+	<meta charset="UTF-8">
+	<title>문서 제목</title>
+	<script>
+		var a = 27;
+		var b = "송예슬";
+		var c = "여행"
+		document.write("나" + b + "은" + a + "살 입니다.")
+	</script>
+</head>
+<body>
+	<p>나 <script> document.write(b);</script>은</p>
+	<p><script> document.write(a)</script>살 입니다.</p>
+	<p>나 <script> document.write(b);</script>은
+		<script>document.write(c)</script>이 가고싶어요</p>
+
+	<button type="button" onclick="alert('가자')">클릭</button>
+</body>
+</html>

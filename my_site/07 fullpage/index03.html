@@ -1,0 +1,458 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
+	<meta charset="UTF-8">
+	<title>fullpage</title>
+	<link rel="stylesheet" href="css/jquery.bxslider.css">
+	<link rel="stylesheet" href="css/fullpage.css">
+	<link rel="stylesheet" href="css/slick.css">
+ 	<link rel="stylesheet" href="css/slick-theme.css">
+	<link rel="stylesheet" href="css/reset.css">
+	<link rel="stylesheet" href="css/main03.css">
+	<script src="js/jquery-3.1.1.min.js"></script>
+	<script src="js/jquery.bxslider.js"></script>
+	<script src="js/jquery.fullpage.js"></script> 
+	<script src="js/slick.min.js"></script>
+
+	<!-- aos.js 1번 import-->
+   <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+   <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+	<script>
+		$(document).ready(function(){
+
+			$('#toggle').click(function () {
+			    $(this).toggleClass('toggle-active');
+			    $('#overlay').toggleClass('nav-active');
+			});
+
+			$('.overlay ul li').click(function () {
+			    $('.toggle-button').removeClass('toggle-active');
+			    $('.overlay').removeClass('nav-active');
+			});
+	  	 var mySlider= $(".slider").bxSlider({
+	  	 	auto:false,   //슬라이드 자동
+	  	 	//mode:"fade",  //슬라이드 방향
+	  	 	controls:false, // 버튼사용 안함
+	  	 	pager:false // 이동버튼사용안함
+	  	 });
+
+	  	 $(".sb2").click(function(){
+	  	 	mySlider.goToNextSlide();
+	  	 });
+	  	 $(".sb1").click(function(){
+	  	 	mySlider.goToPrevSlide();
+	  	 });
+
+	  	 $(".fullpage").fullpage({
+				anchors:["a1pg","a2pg","a3pg","a4pg","a5pg",],
+				menu:"#tMenu",
+				navigationPosition: 'right',
+				// // 2번 적용 풀페이지시 이걸로 적용 
+				// // 풀페이지 아닐시 AOS.init();만 작성
+				scrollBar: true,
+		        afterRender: function(){
+		  			AOS.init();
+		        },
+				afterLoad:function(anchorslink,index){
+					console.log(anchorslink+", "+index);
+					if( index != 1){
+						$("#header").addClass("bg");
+					}else{
+						$("#header").removeClass("bg");
+					}
+				},
+		});
+	  	 $.fn.fullpage.setAllowScrolling(true);
+	$('.slick').slick({
+            centerMode: false,
+            //centerPadding: '20px',
+            slidesToShow: 4,
+            prevArrow: $('#aro1_prev'),
+			nextArrow: $('#aro1_next'),
+            responsive: [
+              {
+                breakpoint: 1200,
+                settings: {
+                  arrows: false,
+                  //centerMode: true,
+                  centerPadding: '20px',
+                  slidesToShow: 3
+                }
+              },
+              {
+                breakpoint: 750,
+                settings: {
+                  arrows: false,
+                  //centerMode: true,
+                  centerPadding: '40px',
+                  slidesToShow: 2
+                }
+              }
+            ]
+          });
+		});
+	</script>
+</head>
+<body>
+	<!-- header -->
+	<header id="header" class="clearfix">
+		<h1>
+			<a href="#"><img src="images/PaulBassett/logo.png" alt=""></a>
+		</h1>
+		<nav class="nav">
+			<ul id="tMenu" class="clearfix">
+				<li data-menuanchor="a1pg"><a href="#a1pg"  class="active">HOME</a></li>
+				<li data-menuanchor="a2pg"><a href="#a2pg">ABOUT</a></li>
+				<li data-menuanchor="a3pg"><a href="#a3pg">MENU</a></li>
+				<li data-menuanchor="a4pg"><a href="#a4pg">SHOP</a></li>
+				<li data-menuanchor="a5pg"><a href="#a5pg">INSTA</a></li>
+			</ul>
+		</nav>
+		<div class="navbar-header">
+            <div class="toggle-button" id="toggle">
+                <span class="bar top"></span>
+                <span class="bar middle"></span>
+                <span class="bar bottom"></span>
+            </div>
+        </div>
+        <nav class="overlay" id="overlay">
+          <ul>
+            <li><a href="#a1pg">HOME</a></li>
+            <li><a href="#a2pg">ABOUT</a></li>
+            <li><a href="#a3pg">MENU</a></li>
+            <li><a href="#a4pg">SHOP</a></li>
+            <li><a href="#a5pg">INSTA</a></li>
+          </ul>
+        </nav>
+	</header>
+
+
+
+	<!-- body -->
+	<div class="fullpage">
+		<div class="section" id="page1" data-anchor="a1pg">
+			<ul class="slider">
+				<li style="background-image:url('./images/PaulBassett/main_1.jpg')">
+					<div class="stxt">
+						<h1>Ice Flakes</h1>
+						<p>폴바셋리 선보이는 시원한 여름 디저트 빙수3종</p>
+						<img src="images/PaulBassett/mouse.png" alt="" class="mouse">
+						<span>SCROLL DOWN</span>
+					</div>
+				</li>
+				<li  style="background-image:url(./images/PaulBassett/main_2.jpg">
+					<div class="stxt">
+						<h1>Summer Frappe</h1>
+						<p>상큼, 달콤한 과일 프라페로 무더운 여름을 시원하게</p>
+						<img src="images/PaulBassett/mouse.png" alt="" class="mouse">
+						<span>SCROLL DOWN</span>
+					</div>
+				</li>
+			</ul>
+			<img src="images/PaulBassett/b1.png" alt="" class="sb1">
+			<img src="images/PaulBassett/b2.png" alt="" class="sb2">
+		</div>
+
+
+		<div class="section" id="page2" data-anchor="a2pg">
+			<div class="ptxt">
+				<h2>ABOUT</h2>
+				<div class="line"></div>
+				<p>WBC Champion Paul Bassett</p>
+			</div>
+			<div class="wrapB">
+				<img src="images/PaulBassett/bassett4_1.jpg" alt="" class="bassett4_1" data-aos="fade-right" data-aos-duration="500" data-aos-delay="300">
+				<img src="images/PaulBassett/bassett4.jpg" alt="" class="bassett4" data-aos="fade-right" data-aos-duration="500" data-aos-delay="600">
+				<div class="page2txt" data-aos="fade-left" data-aos-duration="500" data-aos-delay="900">
+					<h5>2003년 WBC(세계 바리스타 챔피언십)에서<br>
+ 					<span>'역대 최연소 챔피언'을 수상한 호주 출신의 바리스타 폴 바셋</span></h5>	
+ 					<div class="page2txt_1" class="clearfix">
+	 					<p>국적</p>	
+	 					<p>경력</p>	
+	 					<p style="margin-top: 41px;margin-bottom: 126px;">소개</p>
+ 					</div>
+ 					<div class="page2txt_2" class="clearfix">
+ 						<p>호주</p>	
+	 					<p style="line-height:23px;">2003  AUSTRALIA BARISTA CHAMPIONSHIP WINNER<br>
+						2003  WORLD BARISTA CHAMPIONSHIP WINNER</p>	
+	 					<p>세계 챔피언.현재 호주 시드니를 거점으로아시아, 유럽으로도<br>
+						활동지역을 넓혀 다방면에 걸친 커피 비즈니스를 전개, 현재 세계가 <br>
+						주목하고 있는 바리스타 중 한 명입니다. 바리스타 폴 바셋은<br> 
+						2003년 당시 Boston, United States에서 개최된
+						 WBC 대회에서<br> 
+						 역대 최연소 및 호주인 최초로 챔피언이라는 타이틀을 수상하였습니다.<br> 
+						폴 바셋은 당시 초콜릿, 크림, 바닐라 시럽을 이용해 자신의 <br>
+						이름을 딴 ‘Baccino’ 라는 창작메뉴로 호평을 받았습니다.</p>
+ 					</div>
+ 					<div class="page2txt_3" class="clearfix">
+
+ 						 <a href="https://ko-kr.facebook.com/paulbassettkorea/" class="btn btn-1" target="_blank"> 
+					      <svg>
+					        <rect x="0" y="0" fill="none" width="100%" height="100%"/>
+					      </svg>
+					     페이스북
+					    </a>
+
+					    <a href="https://www.instagram.com/paulbassettkorea/?hl=ko" class="btn btn-1" target="_blank"> 
+					      <svg>
+					        <rect x="0" y="0" fill="none" width="100%" height="100%"/>
+					      </svg>
+					     인스타그램
+					    </a>
+ 					</div>
+				</div>
+			</div>
+		</div>
+
+
+
+		<div class="section" id="page3" data-anchor="a3pg">
+			<div class="ptxt">
+				<h2>MENU</h2>
+				<div class="line"></div>
+				<p>Paul Bassett의 신제품을 소개합니다</p>
+			</div>
+			<div class="wrapB">
+				<div class="arrowSlider">
+					<span class="prev" id="aro1_prev"><img src="images/PaulBassett/b1.png" alt=""></span>
+					<span class="next" id="aro1_next"><img src="images/PaulBassett/b2.png" alt=""></span>
+				</div>
+	          	<div class="slick">
+		              <div class="sBox">
+		                <img src="images/PaulBassett/mi1.jpg" alt="">
+		                <h3>Summer<br>Frappe </h3>
+		                <p>(S)7,000D원 (G)8,300원</p>
+		              </div>
+		              <div class="sBox">
+		                <img src="images/PaulBassett/mi2.jpg" alt="">
+		                <h3>FAUCHON<br>Iced Tea</h3>
+		                <p>(S)5,800D원 (G)6,300원</p>
+		              </div>
+		              <div class="sBox">
+		                <img src="images/PaulBassett/mi3.jpg" alt="">
+		                <h3>Blueberry<br>Sweet rice drink </h3>
+		                <p>(S)8,800D원 (G)9,300원</p>
+		              </div>
+		              <div class="sBox">
+		                <img src="images/PaulBassett/mi4.jpg" alt="">
+		                <h3>Watermelon<br>Juice</h3>
+		                <p>(S)4,900D원 (G)5,300원</p>
+		              </div>
+		               <div class="sBox">
+		                <img src="images/PaulBassett/mi1.jpg" alt="">
+		                <h3>Summer<br>Frappe </h3>
+		                <p>(S)7,000D원 (G)8,300원</p>
+		              </div>
+		              <div class="sBox">
+		                <img src="images/PaulBassett/mi2.jpg" alt="">
+		                <h3>FAUCHON<br>Iced Tea</h3>
+		                <p>(S)5,800D원 (G)6,300원</p>
+		              </div>
+		              <div class="sBox">
+		                <img src="images/PaulBassett/mi3.jpg" alt="">
+		                <h3>Blueberry<br>Sweet rice drink </h3>
+		                <p>(S)8,800D원 (G)9,300원</p>
+		              </div>
+		              <div class="sBox">
+		                <img src="images/PaulBassett/mi4.jpg" alt="">
+		                <h3>Watermelon<br>Juice</h3>
+		                <p>(S)4,900D원 (G)5,300원</p>
+		              </div>
+	          	</div>
+			</div>
+		</div> 
+		<div class="section" id="page4" data-anchor="a4pg">
+			<div class="ptxt">
+				<h2>SHOP</h2>
+				<div class="line"></div>
+				<p>Paul Bassett의  매장을  소개합니다</p>
+			</div>
+			<div class="wrapB">
+					<ul class=" page4txt clearfix">
+						<li>
+							<h5>금왕(상:평택방향)점</h5>
+							<p>[휴게소매장] 충청북도 음성군 
+							금왕읍 평택제천고속도로 69금왕
+							(상)휴게소 폴바셋</p>
+						</li>
+						<li>
+							<h5>전주송천점</h5>
+							<p>[대형매장] 전라북도 전주시 덕진구 
+							송천중앙로 85 1층  폴바셋</p>
+						</li>
+						<li>
+							<h5>금왕(하:제천방향)점</h5>
+							<p>[휴게소매장] 충청북도 음성군 금왕읍 
+							평택제천고속도로 70 금왕(하)휴게소 
+							폴바셋</p>
+						</li>
+						<li>
+							<h5>청주점</h5>
+							<p>[휴게소매장] 충청북도 청주시 
+							흥덕구 옥산면 경부고속도로 318 
+							청주휴게소 폴바셋</p>
+						</li>
+						<li>
+							<h5>신림점</h5>
+							<p>서울 관악구 신림동 
+							신원로 4길 24 6층 폴바셋</p>
+						</li>
+						<li>
+							<h5>광명점</h5>
+							<p>경기도 광명시 광명역로 21 
+							광명역폴바셋</p>
+						</li>
+					</ul>
+				<div class="map-wrap">
+				<img src="images/PaulBassett/map.png" alt="" class="map"
+				 data-aos="fade-in" data-aos-duration="500" data-aos-delay="300">
+				 <a href="https://map.naver.com/v5/search/%ED%8F%B4%EB%B0%94%EC%85%8B/place/1977280116?placeSearchOption=fromNxList=true%26noredirect=1%26entry=pll&c=14125448.1715581,4507993.1759750,13,0,0,0,dh&placePath=%2Fhome%3Fentry=pll">
+				<img src="images/PaulBassett/po1.png" alt="" class="po po1"
+				data-aos="fade-in" data-aos-duration="500" data-aos-delay="900">
+				</a>
+				<a href="https://map.naver.com/v5/search/%ED%8F%B4%EB%B0%94%EC%85%8B/place/35575619?c=14122247.3709987,4507333.9066060,13,0,0,0,dh&placePath=%3Fentry%253Dpll%2526">
+				<img src="images/PaulBassett/po1.png" alt="" class="po po2"
+				data-aos="fade-in" data-aos-duration="500" data-aos-delay="1200">
+				</a>
+				<a href="https://map.naver.com/v5/search/%ED%8F%B4%EB%B0%94%EC%85%8B/place/1664565711?c=14122247.3709987,4507333.9066060,13,0,0,0,dh&placePath=%3Fentry%253Dpll%2526">
+				<img src="images/PaulBassett/po1.png" alt="" class="po po3"
+				data-aos="fade-in" data-aos-duration="500" data-aos-delay="1500">
+				</a>
+				<a href="https://map.naver.com/v5/search/%ED%8F%B4%EB%B0%94%EC%85%8B/place/37800244?c=14123260.1616235,4511862.8005319,13,0,0,0,dh&placePath=%3Fentry%253Dpll%2526">
+				<img src="images/PaulBassett/po1.png" alt="" class="po po4"
+				data-aos="fade-in" data-aos-duration="500" data-aos-delay="1800">
+				</a>
+				<a href="https://map.naver.com/v5/search/%ED%8F%B4%EB%B0%94%EC%85%8B/place/36028730?c=14140448.9383591,4511308.6320768,13,0,0,0,dh&placePath=%3Fentry%253Dpll%2526">
+				<img src="images/PaulBassett/po1.png" alt="" class="po po5"
+				data-aos="fade-in" data-aos-duration="500" data-aos-delay="2100">
+				</a>
+				<a href="https://map.naver.com/v5/search/%ED%8F%B4%EB%B0%94%EC%85%8B/place/1560525842?c=14143172.0074917,4507133.2594068,13,0,0,0,dh&placePath=%3Fentry%253Dpll%2526">
+				<img src="images/PaulBassett/po1.png" alt="" class="po po6"
+				data-aos="fade-in" data-aos-duration="500" data-aos-delay="2400">
+				</a>
+				</div>
+			</div>
+		</div>
+
+		<div class="section" id="page5" data-anchor="a5pg">
+			<div class="ptxt">
+				<h2>INSTA</h2>
+				<div class="line"></div>
+				<p>여러분이 담아주신 폴바셋의 모습입니다.</p>
+			</div>
+			<div class="wrapB">
+				<ul class="clearfix">
+					<li>
+						<div class="snstxt">
+							<p class="pfont">재방문 너무너무 맛있는  폴바셋<br>
+							아이스크림라떼!!!</p>
+				             <span class="clearfix">♥</span>
+				             <p class="sns2">191</p>
+						</div>
+					</li>
+					<li>
+						<div class="snstxt">
+							<p class="pfont">매번 먹어도 맛있는 폴바셋<br>
+							아이스크림라떼!!!</p>
+				             <span class="clearfix">♥</span>
+				             <p class="sns2">251</p>
+						</div>
+					</li>
+					<li>
+						<div class="snstxt">
+							<p class="pfont">겨울에는 딸기라떼<br>
+							생과일 짱!</p>
+				             <span class="clearfix">♥</span>
+				             <p class="sns2">101</p>
+						</div>
+					</li>
+					<li>
+						<div class="snstxt">
+							<p class="pfont">방문하면 꼭 먹는 아이스크림<br>
+							아이스크림라떼!!!</p>
+				             <span class="clearfix">♥</span>
+				             <p class="sns2">199</p>
+						</div>
+					</li>
+					<li>
+						<div class="snstxt">
+							<p class="pfont">에크타르트랑 아이스크림라떼<br>
+							폴바셋</p>
+				             <span class="clearfix">♥</span>
+				             <p class="sns2">191</p>
+						</div>
+					</li>
+					<li>
+						<div class="snstxt">
+							<p class="pfont">오늘하루도  폴바셋<br>
+							아이스크림라떼!!!</p>
+				             <span class="clearfix">♥</span>
+				             <p class="sns2">301</p>
+						</div>
+					</li>
+					<li>
+						<div class="snstxt">
+							<p class="pfont">나는 따듯한 아메리카노<br>
+							팀장님은 아이스크리</p>
+				             <span class="clearfix">♥</span>
+				             <p class="sns2">191</p>
+						</div>
+					</li>
+					<li>
+						<div class="snstxt">
+							<p class="pfont">우울한날은 아이스초코초코<br>
+							나의 최애 간식~</p>
+				             <span class="clearfix">♥</span>
+				             <p class="sns2">101</p>
+						</div>
+					</li>
+					<li>
+						<div class="snstxt">
+							<p class="pfont">오늘은 내가 쏜다<br>
+							송총무~~~</p>
+				             <span class="clearfix">♥</span>
+				             <p class="sns2">191</p>
+						</div>
+					</li>
+					<li>
+						<div class="snstxt">
+							<p class="pfont">봄느낌을 즐길수있는<br>
+							아이스크림라떼!!!</p>
+				             <span class="clearfix">♥</span>
+				             <p class="sns2">177</p>
+						</div>
+					</li>
+				</ul>
+			</div>
+		</div>  
+		<div class="section footer fp-auto-height">
+			<div class="wrapB clearfix">
+				<img src="images/PaulBassett/logo.png" alt="">
+				<div class="ftxt">
+					<ul class="clearfix">
+						<li>개인정보처리방침</li>
+						<li>신규입점안내</li>
+						<li>이용약관</li>
+						<li>소사이어티카드</li>
+						<li>기프트카드이용약관</li>
+						<li>FAQ</li>
+					</ul>
+					<ul class="ftxt2">
+						<li>엠즈씨드(주) 대표이사 : 김용철 </li>
+						<li>주소 : 서울특별시 강남구 도산대로 75길 22 (청담동)</li>
+						<li>사업자등록번호 211-88-95935</li>
+						<li>대표번호 1899-8829</li>
+						<li>개인정보관리책임자 : 정보문</li>
+						<li>© 2019 m’s seed Co., Ltd. All rights reserved</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+	</div>
+</body>
+</html

@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+	<meta charset="UTF-8">
+	<title>검색</title>
+	<style>
+		*{padding: 0;margin: 0;box-sizing:border-box;}
+		html,body{height: 100%;}
+		body{background-image: url(images/sky.jpg);
+			background-repeat: no-repeat;
+			background-position: center;
+			-webkit-background-size: cover;
+			background-size: cover;
+			overflow-y:scroll;
+			overflow-x:hidden;}
+
+		.searchinp{width: 400px;height: 50px;
+			border: 3px solid #000;
+			border-radius:25px;
+			text-indent:80px;
+			font-size:15px;
+			font-weight:bold;
+			position: relative;
+			z-index: 1;}
+
+		.searchbtn{width: 20px;height: 20px;
+			background-image: url(images/search.jpg);
+			text-indent:-9999px;
+			border:0 none;
+			position: absolute; right: 20px;top: 15px;
+			z-index: 1;}
+
+		.searchtitle{width: 60px;height: 20px;
+			background-image: url(images/searchtext.jpg);
+			display: block;
+			text-indent:-9999px;
+			position: absolute; top: 15px; left: 15px;
+			z-index: 2;}
+
+		.warp{position: absolute;
+			/*background:skyblue;*/
+			width: 400px;height: 50px;
+			left: 50%;top: 50%;
+			transform:translate(-50%,-50%);}
+
+		.img01{position: absolute; right: -100px;top: -250px;
+			animation-name: bal;
+			animation-duration: 3s;
+			animation-iteration-count:infinite;
+			animation-direction:alternate;
+			animation-timing-function:ease-in-out;}
+		@keyframes bal{
+			0%{right: -100px;top: -250px;}
+			100%{right: -100px;top: -220px;}
+			}
+
+		.img00{
+			position: absolute; left: 0;margin: 0;
+			animation-name:air;
+			animation-duration: 3s;
+			animation-fill-mode:forwards;}
+		@keyframes air{
+			0%{left: 0;bottom: 0;}
+			100%{left: 1000px;bottom: 1000px;}
+		}
+
+		.sh01{position: absolute;right: 0;top: 0;
+			animation-name: sh;
+			animation-duration: 3s;
+			animation-iteration-count:infinite;
+			animation-direction:alternate;
+			animation-timing-function:ease-in-out;}
+
+		@keyframes sh{
+			0%{right: 0;top: 0;}
+			100%{right: 1000px;top: 1000px;}
+		}
+
+
+		
+	</style>
+</head>
+<body>
+	<div class="warp">
+		<img src="images/content2.png" alt=""  class="img01">
+		<form action="#" method="get">
+			<label for="searchtext" class="searchtitle">searchtxt</label>
+			<input type="text" id="searchtxt" name="search" placeholder="검색어를 입력하세요." class="searchinp">
+			<button type="submit" class="searchbtn">search</button>
+		</form>
+	</div>
+	<img src="images/reallyAir.png" alt="" class="img00">
+	<img src="images/-sh.png" alt="" class="sh01">
+</body>
+</html>

@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>bootstrap</title>
+	<link rel="stylesheet" href="css/bootstrap.css">
+	<link rel="stylesheet" href="css/jquery.bxslider.css">
+	<link rel="stylesheet" href="css/reset.css">
+	<script src="js/jquery-3.1.1.min.js"></script>
+	<script src="js/jquery.bxslider.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+	<script src="js/bootstrap.min.js"></script>
+	<style>
+		.box1{height: 40px;}
+		.bg-sky{background:skyblue;}
+		.container{margin-bottom: 50px;}
+	</style>
+
+</head>
+<body>
+	<div class="bg-sky py-5">
+		<div class="container">
+			<div class="row text-center  h-100">
+				<div class="col-sm-6 col-md-3 bg-primary box1">1</div>
+				<div class="col-sm-6 col-md-3 bg-success box1">2</div>
+				<div class="col-sm-6 col-md-3 bg-danger box1">3</div>
+				<div class="col-sm-6 col-md-3 bg-info box1">4</div>
+			</div>
+		</div>
+	</div>
+	<div class="container">
+		<div class="row">
+			<div>
+				<button type="button" class="btn btn-primary">basic</button>
+				<button type="button" class="btn btn-secondary">basic</button>
+				<button type="button" class="btn btn-success">basic</button>
+				<button type="button" class="btn btn-info">basic</button>
+				<button type="button" class="btn btn-warning">basic</button>
+				<button type="button" class="btn btn-danger">basic</button>
+				<a href="#" class="btn btn-primary btn-lg">더보기</a>
+				<a href="#" class="btn btn-outline-primary">더보기</a>
+
+				<div class="btn-group">
+					<button type="button" class="btn btn-primary">company</button>
+					<button type="button" class="btn btn-secondary">product</button>
+					<button type="button" class="btn btn-success">basic</button>
+					<button type="button" class="btn btn-success">basic</button>
+					<button type="button" class="btn btn-success">basic</button>
+					<button type="button" class="btn btn-success">basic</button>
+				</div>
+				<div class="btn-group-vertical">
+					<button type="button" class="btn btn-primary">company</button>
+					<button type="button" class="btn btn-secondary">product</button>
+					<button type="button" class="btn btn-success">basic</button>
+					<button type="button" class="btn btn-success">basic</button>
+					<button type="button" class="btn btn-success">basic</button>
+					<button type="button" class="btn btn-success">basic</button>
+				</div>
+				<button type="button" class="btn btn-success btn-block">basic</button>
+			</div>
+		</div>
+	</div>
+
+	<div class="container">
+		<div class="row">
+			<div class="btn-group">
+				<button class="btn btn-primary active">Apple</button>
+				<button class="btn btn-primary">Samsung</button>
+				<div class="btn-group">
+					<button class="btn btn-primary dropdown-toggle" data-toggle="dropdown">Sony</button>
+					
+					<div class="dropdown-menu">
+						<a href="#" class="dropdown-item">tablet</a>
+						<a href="#" class="dropdown-item">smartphone</a>
+					</div>
+
+
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<ul class="nav bg-primary">
+		<li class="nav-item">
+			<a href="#" class="nav-link">menu1</a>
+		</li>
+		<li class="nav-item">
+			<a href="#" class="nav-link">menu2</a>
+		</li>
+		<li class="nav-item">
+			<a href="#" class="nav-link">menu3</a>
+		</li>
+		<li class="nav-item">
+			<a href="#" class="nav-link">menu4</a>
+		</li>
+		<li class="nav-item">
+			<a href="#" class="nav-link">menu5</a>
+		</li>
+	</ul>
+	<div style="height:20px"></div>
+	<div class="container">
+		<div class="row">
+			<ul class="nav nav-tabs">
+				<li class="nav-item">
+					<a href="#menu1" class="nav-link active " data-toggle="tab">link1</a>
+				</li>
+				<li class="nav-item">
+					<a href="#menu2" class="nav-link btn" data-toggle="tab">link1</a>
+				</li>
+				<li class="nav-item">
+					<a href="#menu3" class="nav-link btn" data-toggle="tab">link1</a>
+				</li>
+			</ul>
+			<div class="tab-content">
+				<div class="tab-pane active py-3" id="menu1">
+				1Lorem ipsum dolor, sit amet consectetur adipisicing elit. Veniam nisi, a voluptatibus voluptatum ea sint. Qui, praesentium exercitationem. Illum quidem qui voluptates necessitatibus, officia minima asperiores, numquam nihil cupiditate ea?
+				</div>
+				<div class="tab-pane fade  py-3" id="menu2">
+				2Lorem ipsum dolor, sit amet consectetur adipisicing elit. Veniam nisi, a voluptatibus voluptatum ea sint. Qui, praesentium exercitationem. Illum quidem qui voluptates necessitatibus, officia minima asperiores, numquam nihil cupiditate ea?
+				</div>
+				<div class="tab-pane fade  py-3" id="menu3">
+				3Lorem ipsum dolor, sit amet consectetur adipisicing elit. Veniam nisi, a voluptatibus voluptatum ea sint. Qui, praesentium exercitationem. Illum quidem qui voluptates necessitatibus, officia minima asperiores, numquam nihil cupiditate ea?
+				</div>
+			</div>
+			</div>
+	</div>
+
+	<div style="height:300px"></div>
+</body>
+</html>

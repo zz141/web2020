@@ -1,0 +1,50 @@
+@charset "utf-8";
+
+#page1{background-image: url(../images/PaulBassett/main_1.jpg);}
+#page2{background-image: url(../images/bg2.jpg);}
+#page3{background-image: url(../images/bg3.jpg);}
+#page4{background-image: url(../images/bg4.jpg);}
+
+.section{background-repeat: no-repeat;
+        background-position: center;
+        background-size:cover;}
+
+
+nav#navTop{ position: fixed;z-index:1;width: 100%;}
+nav#navTop>a>img{float:left; position: absolute;left:30px;top: 10px;}
+nav#navTop ul{position: absolute;right:30px;top:23px;}
+nav#navTop li{float: left;}
+nav#navTop li a{display: block;line-height:50px;
+    text-align: center;padding: 0 10px;color:white}
+
+/*nav#navTop li.active{color:black}*/
+.scroll>a>img{width:20px;height:50px;}
+.scroll{position:absolute;left:200px;top:52%;
+    animation:xScroll 0.8s infinite alternate;}
+     @keyframes xScroll{
+            from{top:52%;}
+            to{top:53%;}
+        }
+.scrolldown{position: absolute;left:233px;top:53%;color:white}
+.main{width: 900px;position:absolute;left:200px;
+    color:white;}
+.main h1{margin-bottom: 20px;}
+
+#onViewOne{top:10%;transition:0.3s;opacity:0;}
+#onViewOne.move{top:30%;opacity:1;}
+
+#onViewTwo{left:10%;transition:0.3s;opacity:0;}
+#onViewTwo.move{left:50%;opacity:1;}
+
+
+.f3em{font-size:3em !important}
+.f25em{font-size:4em !important}
+.f2em{font-size:2em !important}
+.f15em{font-size:1.3em !important}
+.mb20{margin-bottom: 20px !important;}
+
+        
+.slide{position: relative;}
+.slide .view{position: absolute;width: 80%;height: 500px;
+    background-color: skyblue;left:50%;top:50%;
+    transform: translate(-50%,-50%);}

@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+	<meta charset="UTF-8">
+	<title>문서 제목</title>
+	<script>
+		var a = "송예슬";
+		var b = 100;
+		var c = 500;
+		var d;
+
+		if(b != 90){
+			document.write(a + "점수는" + b +"입니다." + "<br>")
+		}
+		
+		if(b != 100){
+			document.write(a + "점수는" + b +"입니다." + "<br>")
+		}
+		// != b가 100이 아닐때 실행시켜주세요(그래서 처음if가 실행됨)
+
+		d = (b > c)? b : c;
+		document.write(d)
+		d = (b < c)? b : c;
+		document.write(d + "<br>")
+		// ?= if 비슷 ?앞에있는아이가 참이면 앞에있는게 실행됨 거짓이면 뒤에있는게 실행됨
+	</script>
+
+
+	<script>
+		var q = "s"
+		var w = 100;
+		var e;
+
+		if(q == "a"){
+			alert("내친구")
+			if(w>=90){
+			e = "채혜윤"
+			}else{
+			e = "이혜림"
+			}
+		}else{
+			alert("내친구")
+			if(w<=100){
+				e = "손지원"
+			}else{
+				e = "안수현"
+			}
+		}
+		document.write(e)
+	</script>
+</head>
+<body>
+	
+</body>
+</html>

@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+   <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+   <meta charset="UTF-8">
+   <title>Company</title>
+   <link rel="stylesheet" href="css/reset.css">
+   <link rel="stylesheet" href="css/jquery.bxslider.css">
+   <link rel="stylesheet" href="css/slick.css">
+  <link rel="stylesheet" href="css/slick-theme.css">
+  <link rel="stylesheet" href="css/main.css">
+   <script src="js/jquery-3.1.1.min.js"></script>
+   <script src="js/jquery.bxslider.js"></script>
+   <script src="js/slick.min.js"></script>
+   
+   <script>
+      $(document).ready(function(){
+         $(".slider").bxSlider({ pager:false})
+         $('.slick').slick({
+            centerMode: false,
+            //centerPadding: '20px',
+            slidesToShow: 4,
+            responsive: [
+              {
+                breakpoint: 768,
+                settings: {
+                  arrows: false,
+                  centerMode: true,
+                  centerPadding: '20px',
+                  slidesToShow: 2
+                }
+              },
+              {
+                breakpoint: 480,
+                settings: {
+                  arrows: false,
+                  centerMode: true,
+                  centerPadding: '40px',
+                  slidesToShow: 1
+                }
+              }
+            ]
+          });
+      })
+   </script>
+</head>
+<body>
+   <header id="header" class="main">
+      <div id="header_top">
+         <h1><a href="#">SW</a></h1>
+         <nav id="main_menu">
+            <ul class="clearfix">
+               <li><a href="#">회사소개</a></li>
+               <li><a href="#">웨딩컬렉션</a></li>
+               <li><a href="#">웨딩홀</a></li>
+               <li><a href="#">혼수컬렉션</a></li>
+               <li><a href="#">웨딩가이드</a></li>
+               <li><a href="#">이벤트</a></li>
+            </ul>
+         </nav>
+      </div>
+    </header>
+
+
+      <div class="slider_wrap">
+         <ul class="slider">
+            <li class="first">
+               <div class="slider_txt">
+                  <h3>Wedding Consulting</h3>
+               </div>
+            </li>
+            <li class="second">
+               <div class="slider_txt">
+                  <h3>Wedding Consulting</h3>
+               </div>
+            </li>
+         </ul>
+      </div>
+
+
+      <div class="content">
+         <ul class="clearfix">
+            <li class="box1">
+               <img src="images/i1.png" alt="">
+               <p>회사소개</p>
+            </li>
+
+            <li class="box2">
+               <img src="images/img1.jpg" alt="">
+               <img src="images/i2-1.png" alt="" class="button">
+            </li>
+
+            <li class="box3">
+               <h3>가이드</h3>
+               
+                  <p>결혼 준비의 첫번째는 웨딩플래너를 
+                     만나는 일이 아닐까 싶습니다.
+                     사람과 사람이 준비해나가는 
+                     일이다보니 아쉬움이 남을수도 있지만
+                     저희는 그부분을 최소한으로........ </p>
+              
+            </li>
+
+            <li class="box4">
+                <img src="images/img2.jpg" alt="">
+            </li>
+
+            <li  class="box5">
+               <img src="images/img3.jpg" alt="">
+               <p>스튜디오</p>
+            </li>
+
+            <li  class="box6">
+              <img src="images/i2.png" alt=""> 
+              <p>드레스</p>
+            </li>
+
+            <li  class="box7">
+               <img src="images/i3.png" alt=""> 
+              <p>헤어/메이크업</p>
+            </li>
+
+            <li class="box8">
+                <img src="images/img4.jpg" alt="">
+                <h3>웨딩홀 검색</h3>
+                <p>당일 계약 시 특별한<br><br>
+				            혜택을 드립니다.</p>
+            </li>
+
+            <li class="box9">
+             	<img src="images/img5.jpg" alt="">
+             	<h3>스·드·메 계산기</h3>
+             	<p>내가 원하는 스드메구성<br>
+             		무제한견적비교하고<br>
+             		할인받자!!</p>
+            </li>
+
+            <li class="box10">
+            	<img src="images/i4.png" alt="">
+            	 <p>예단/예물</p>
+            </li>
+
+            <li class="box11">
+            	<img src="images/i5.png" alt="">
+            	 <p>청첩장</p>
+            </li>
+
+            <li class="box12">
+            	<img src="images/img6.jpg" alt="">
+             	<h3>빠른상담 신청</h3>
+             	<p>당일 계약시 특뱔한 혜택을 <br>드립니다.</p>
+            </li>
+         </ul>
+      </div>
+    <style>
+      .event .sBox img{display: block;margin: 0 auto} 
+    </style>
+      <div class="event">
+      	<h3> E v e n t</h3>
+        <div class="boxWrap">
+          <div class="slick">
+            
+              <div class="sBox">
+                <img src="images/hi1.jpg" alt="">
+                <h3>드·메 35만원패키지</h3>
+                <p>(드레스+턱시도+헤어/메이크업)</p>
+              </div>
+              <div class="sBox">
+                <img src="images/hi2.jpg" alt="">
+                <h3>세미촬영 29만원패키지</h3>
+                <p>(스냅촬영+드레스+헤어/메이크업+원본CD)</p>
+              </div>
+              <div class="sBox">
+                <img src="images/hi3.jpg" alt="">
+                <h3>스·드·메 129만원패키지</h3>
+                <p>(스튜디오촬영+드레스+턱시도+헤어/메이크업)</p>
+              </div>
+              <div class="sBox">
+                <img src="images/hi4.jpg" alt="">
+                <h3>본식 79만원패키지</h3>
+                <p>(드레스+턱시도+헤어/메이크업+본식촬영)</p>
+              </div>
+                <div class="sBox">
+                <img src="images/hi1.jpg" alt="">
+                <h3>드·메 35만원패키지</h3>
+                <p>(드레스+턱시도+헤어/메이크업)</p>
+              </div>
+              <div class="sBox">
+                <img src="images/hi2.jpg" alt="">
+                <h3>세미촬영 29만원패키지</h3>
+                <p>(스냅촬영+드레스+헤어/메이크업+원본CD)</p>
+              </div>
+              <div class="sBox">
+                <img src="images/hi3.jpg" alt="">
+                <h3>스·드·메 129만원패키지</h3>
+                <p>(스튜디오촬영+드레스+턱시도+헤어/메이크업)</p>
+              </div>
+              <div class="sBox">
+                <img src="images/hi4.jpg" alt="">
+                <h3>본식 79만원패키지</h3>
+                <p>(드레스+턱시도+헤어/메이크업+본식촬영)</p>
+              </div>
+            
+          </div>
+        </div>
+      </div>
+
+      <div class="sns">
+        <ul class="clearfix">
+          <li class="snsbox1">
+            <h3>회원웨딩후기</h3>
+            <img src="images/i6.png" alt="">
+            <p>언제나 신랑,신부님을 위해가장<br>
+              빠르고 신속한 최신의 솔루션을<br>
+              제시해드립니다.<br>
+              신랑,신부님을 위해 최선을 다하겠습니다.</p>
+          </li>
+
+          <li>
+            <img src="images/si1.jpg" alt="">
+          </li>
+
+          <li class="snsbox2" class="clearfix">
+            <h3>처음에 우승림플래너님을 만난게 
+              11월달이었는데 벌써 예식날이 다가오네요
+              저는 이제 약 2주정도 결혼식이 남았어요
+              떨리는 마음반 빨리 끝났으면 하는 
+              마음반 그래요 ㅎㅎ 스드메 처음에 
+              준비할때 싸게하자라는 마음으로
+              여러군데......... <br><br>
+              <span>♥ </span> <p>101</p>
+            </h3>
+          </li>
+
+          <li>
+            <img src="images/si2.jpg" alt="">
+          </li>
+
+          <li class="snsbox2" class="clearfix">
+            <h3>처음에 우승림플래너님을 만난게 
+              11월달이었는데 벌써 예식날이 다가오네요
+              저는 이제 약 2주정도 결혼식이 남았어요
+              떨리는 마음반 빨리 끝났으면 하는 
+              마음반 그래요 ㅎㅎ 스드메 처음에 
+              준비할때 싸게하자라는 마음으로
+              여러군데......... <br><br>
+              <span>♥ </span> <p>121</p>
+            </h3>
+          </li>
+
+          <li>
+            <img src="images/si3.jpg" alt="">
+          </li>
+
+          <li class="snsbox2" class="clearfix">
+            <h3>처음에 우승림플래너님을 만난게 
+              11월달이었는데 벌써 예식날이 다가오네요
+              저는 이제 약 2주정도 결혼식이 남았어요
+              떨리는 마음반 빨리 끝났으면 하는 
+              마음반 그래요 ㅎㅎ 스드메 처음에 
+              준비할때 싸게하자라는 마음으로
+              여러군데......... <br><br>
+              <span>♥ </span> <p>150</p>
+            </h3>
+          </li>
+        </ul>
+      </div>
+
+      <div class="application">
+        <ul class="clearfix">
+          <li class="applicationbox1">
+            <img src="images/i8.png" alt="">
+            <h3>고객상담신청 02-1234-5678</h3>
+            <p>평일,주말,공휴일 밤 10시까지<br> 
+              365일 상담가능
+            </p>
+            <div class="abox1"><a href="#">고객상담신청</a></div>
+          </li>
+
+          <li>
+            <img src="images/i9.png" alt="">
+            <h3>웨딩플래너모집</h3>
+            <p>가장 많은 꿈이 모여있는곳<br>
+              당신도 플래너가 될수 있습니다.
+            </p>
+            <div class="abox2"><a href="#">플래너모집신청</a></div>
+          </li>
+        </ul>
+      </div>
+
+      <footer class="footer">
+        <div class="wrapB">
+          <h1>sw</h1>
+          <ul class="wfooter1" class="clearfix">
+            <li>회사소개</li>
+            <li>개인정보처리방침</li>
+            <li>이용약관</li>
+            <li>고객센터</li>
+            <li>상담문의</li>
+            <li>사이트맵</li>
+          </ul>
+          <ul class="wfooter2" class="clearfix">
+            <li>대표자:송예슬 </li>
+            <li>서울특별시 관악구 신림동 111-111(신림동)</li>
+            <li>사업자등록번호:5959-595959</li><br>
+            <li>통신판매업 신고번호:제 1212-4 </li>
+            <li>서울 관악구 1004호 </li>
+            <li>개인정보관리 책임자:송예슬 </li>
+            <li>소비자피해보상보험</li><br>
+            <li>고객번호:02-1234-5678</li>
+            <li>FAX:02-1111-1111</li>
+            <li>song@naver.com</li>
+          </ul>
+      </div>
+      </footer>
+</body>
+</html>

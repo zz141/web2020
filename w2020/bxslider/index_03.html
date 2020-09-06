@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+	<meta charset="UTF-8">
+	<title>bxslider</title>
+	<link rel="stylesheet" href="css/reset.css">
+	<link rel="stylesheet" href="css/jquery.bxslider.css">
+	<script src="js/jquery-3.1.1.min.js"></script>
+	<script src="js/jquery.bxslider.js"></script>
+	<script>
+		$(document).ready(function(){
+	  	 var mySlider= $(".slider").bxSlider({
+	  	 	auto:true,   //슬라이드 자동
+	  	 	//mode:"fade",  //슬라이드 방향
+	  	 	controls:false, // 버튼사용 안함
+	  	 	pager:false // 이동버튼사용안함
+	  	 });
+	  	 $(".nexbtn").click(function(){
+	  	 	mySlider.goToNextSlide();
+	  	 });
+	  	 $(".prevbtn").click(function(){
+	  	 	mySlider.goToPrevSlide();
+
+	  	 });
+
+		});
+	</script>
+
+	<style>
+		#sliderwrap{width: 1200px;margin: 0 auto; position: relative;}
+		#slider img{width: 100%;}
+		.nexbtn,.prevbtn{position: absolute; top:50%;margin-top:-50px; cursor:pointer;}
+		.nexbtn{right:10px;}
+		.prevbtn{left:10px;}
+	</style>
+</head>
+<body>
+	<div id="sliderwrap">
+		<ul class="slider">
+			<!-- <li><img src="images/pc01.jpg" alt=""></li> -->
+			<li><img src="images/mkvWrap.jpg" alt=""></li>
+			<li><img src="images/visual_20200529.jpg" alt=""></li>
+		</ul>
+		<div class="nexbtn">
+			<img src="images/b.png" alt="">
+		</div>
+		<div class="prevbtn">
+			<img src="images/b2.png" alt="">
+		</div>
+	</div>
+</body>
+</html>

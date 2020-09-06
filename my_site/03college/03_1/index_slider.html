@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+	<meta charset="UTF-8">
+	<title>collage</title>
+	<link rel="stylesheet" href="css/reset.css">
+	<link rel="stylesheet" href="css/jquery.bxslider.css">
+	<link rel="stylesheet" href="css/style.css">
+	<script src="js/jquery-3.1.1.min.js"></script>
+	<script src="JS/jquery.bxslider.js"></script>
+</head>
+<body>
+
+	<script>
+		$(document).ready(function(){
+			$(".vSlider").bxSlider({pager:false});
+			$(".bSlider").bxSlider({controls:false,auto:true});
+		});
+	</script>
+	<header id="header_wrap">
+		<div class="util_menu_wrap">  <!-- 100% blue -->
+			<nav class="util_menu clearfix"> <!-- 1200  m0a-->
+				<ul class="left clearfix">
+					<li><a href="#" class="active">대학교</a></li>
+					<li><a href="#">입학안내</a></li>
+					<li><a href="#">대학원</a></li>
+				</ul>
+				<ul class="right clearfix">
+					<li>글자크기</li>
+					<li class="btn_mp clearfix">
+						<a href="#">-</a>
+						<a href="#">+</a>
+					</li>
+					<li><a href="#">찾아오시는길</a></li>
+					<li><a href="#">ENGLISH</a></li>
+					<li><a href="#">사이트맵</a></li>
+				</ul>
+			</nav>
+		</div>
+		<div class="main_gnb"> <!-- 1200 m0a -->
+			<h1 class="logo"><a href="#">한국대학교</a></h1>
+			<div class="navWrap clearfix"> <!-- poa -->
+				<ul class="nav clearfix">
+					<li><a href="#">대학소개</a></li>
+					<li><a href="#">학과소개</a></li>
+					<li><a href="#">학사안내</a></li>
+					<li><a href="#">대학생활</a></li>
+					<li><a href="#">학생지원센터</a></li>
+				</ul>
+				<div class="btnToggle clearfix">
+					<a href="#" class="toggle">toggle</a>
+					<a href="#" class="my">my</a>
+				</div>
+
+			</div>
+		</div>
+	</header>
+	<div id="contents">
+		<section class="title"></section>
+		<div class="container">
+			<ul class="clearfix">
+				<li>
+					<ul class="vSlider">
+						<li class="viewSlider">
+							<img src="images/box1_01.jpg" alt="">
+							<div class="sliderTxt">
+								<p>한국에서<br>시작하는<br>새로운꿈</p>
+								<a href="#">자세히보기</a>
+							</div>
+						</li>
+						<li class="viewSlider">
+							<img src="images/box1_01.jpg" alt="">
+							<div class="sliderTxt">
+								<p><span>한국</span>에서<br><span>시작</span>하는<br>새로운<span>꿈</span></p>
+								<a href="#">자세히보기</a>
+							</div>
+						</li>
+					</ul>
+				</li>
+				<li>02</li>
+				<li>03</li>
+				<li>04</li>
+				<li>05</li>
+				<li>06</li>
+				<li>07</li>
+				<li class="sliderTwo">
+					<div class="bSlider">
+						<div><img src="images/banner01_01.jpg" alt=""></div>
+						<div><img src="images/banner01_01.jpg" alt=""></div>
+					</div>
+				</li>
+			</ul>
+		</div>
+	</div>
+	<footer id="footer"></footer>
+</body>
+</html>

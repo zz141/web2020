@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+	<meta charset="UTF-8">
+	<title>bxslider</title>
+	<link rel="stylesheet" href="css/reset.css">
+	<link rel="stylesheet" href="css/jquery.bxslider.css">
+	<script src="js/jquery-3.1.1.min.js"></script>
+	<script src="js/jquery.bxslider.js"></script>
+	<script>
+		 $(document).ready(function(){
+			$(".slider").bxSlider({controls:false, pagerCustom:".bx-pager"
+			});
+		});
+	</script>
+	<style>
+		.wrapper{width: 1260px; margin: 0 auto;
+		 height: 740px; position:relative;}
+
+		.bx-pager{position:absolute; bottom: 0; width: 100%;
+			}
+
+		.bx-pager a{display: block; width: 25%;float:left;
+		 line-height: 45px; text-align: center; background-color:#f00; 
+		 color:white; font-size:1.5em;}	
+
+		 .bx-pager a.active{background-color: pink;}
+
+		div.sliserwrap{width: 1260px; margin: 0 auto;}
+		.bx-wrapper {
+	    -moz-box-shadow:none;
+	    -webkit-box-shadow:none;
+	    box-shadow:none;
+	    border: 0px none;
+	    margin-bottom: 0;}
+		
+	    .sliserwrap .txtwrap{width: 400px;
+	    	/*background-color:skyblue; */
+	    	position: absolute; top:150px; right: 160px;}
+
+	    .sliserwrap .txtwrap h2{font-size:30px;}
+	    .sliserwrap .txtwrap h2:after{content:""; display:block;height: 2px;
+	    							background-color:orange;margin: 10px 0;}
+	    /* .sliserwrap .txtwrap h2:before{content:""; display:block;height: 2px;
+	    							background-color:orange;margin: 10px 0;} */
+	    .sliserwrap .txtwrap p{margin-bottom: 30px;}
+	    .sliserwrap .txtwrap a{/*background-color:black;*/
+	    	background-color:rgba(0,0,0,0);  color:black;
+	    	/*opacity:0.5;*/
+	    	width: 200px;height: 40px;
+	    	display: block; text-align: center; 
+	    	line-height:40px;border: 1px solid #000;border-radius:20px;
+	    	font-weight:bold;}
+	    .sliserwrap .txtwrap a:hover{/*opacity:1;*/ background-color:rgba(0,0,0,1);
+	    	color:white;}
+
+
+	</style>
+</head>
+<body>
+	<div class="wrapper">
+		<div class="sliserwrap">
+			<ul class="slider">
+				<li><img src="images/main_slider01.jpg" alt="">
+					<div class="txtwrap">
+						<h2>Lorem ipsum.1</h2>
+						<p>Lorem ipsum dolor sit amet.</p>
+						<a href="#" class="btn">바로가기</a>
+					</div>
+				</li>
+				<li><img src="images/main_slider01.jpg" alt="">
+					<div class="txtwrap">
+					<h2>Lorem ipsum.2</h2>
+						<p>Lorem ipsum dolor sit amet.</p>
+						<a href="#" class="btn">바로가기</a>
+					</div>
+				</li>
+				<li><img src="images/main_slider01.jpg" alt="">
+					<div class="txtwrap">
+						<h2>Lorem ipsum.3</h2>
+						<p>Lorem ipsum dolor sit amet.</p>
+						<a href="#" class="btn">바로가기</a>
+					</div>
+				</li>
+				<li><img src="images/main_slider01.jpg" alt="">
+					<div class="txtwrap">
+						<h2>Lorem ipsum.4</h2>
+						<p>Lorem ipsum dolor sit amet.</p>
+						<a href="#" class="btn">바로가기</a>
+					</div>
+				</li>
+				<
+			</ul>
+		</div>
+		<div class="bx-pager cleafix">
+			<a href="#" data-slide-index="0">menu1</a>
+			<a href="#" data-slide-index="1">menu2</a>
+			<a href="#" data-slide-index="2">menu3</a>
+			<a href="#" data-slide-index="3">menu4</a>
+		</div>
+	</div>
+</body>
+</html>

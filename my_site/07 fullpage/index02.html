@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
+	<meta charset="UTF-8">
+	<title>fullpage</title>
+	<link rel="stylesheet" href="css/jquery.bxslider.css">
+	<link rel="stylesheet" href="css/fullpage.css">
+	<link rel="stylesheet" href="css/slick.css">
+ 	<link rel="stylesheet" href="css/slick-theme.css">
+	<link rel="stylesheet" href="css/reset.css">
+	<link rel="stylesheet" href="css/main02.css">
+	<script src="js/jquery-3.1.1.min.js"></script>
+	<script src="js/jquery.bxslider.js"></script>
+	<script src="js/jquery.fullpage.js"></script>
+	<script src="js/slick.min.js"></script>
+
+	<!-- aos.js 1번 import-->
+   <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+   <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+	<script>
+		$(document).ready(function(){
+
+			$('#toggle').click(function () {
+			    $(this).toggleClass('toggle-active');
+			    $('#overlay').toggleClass('nav-active');
+			});
+
+			$('.overlay ul li').click(function () {
+			    $('.toggle-button').removeClass('toggle-active');
+			    $('.overlay').removeClass('nav-active');
+			});
+	  	 var mySlider= $(".slider").bxSlider({
+	  	 	auto:false,   //슬라이드 자동
+	  	 	//mode:"fade",  //슬라이드 방향
+	  	 	controls:false, // 버튼사용 안함
+	  	 	pager:false // 이동버튼사용안함
+	  	 });
+
+	  	 $(".sb2").click(function(){
+	  	 	mySlider.goToNextSlide();
+	  	 });
+	  	 $(".sb1").click(function(){
+	  	 	mySlider.goToPrevSlide();
+	  	 });
+
+	  	 $(".fullpage").fullpage({
+				anchors:["a1pg","a2pg","a3pg","a4pg","a5pg","a6pg"],
+				menu:"#tMenu",
+				navigationPosition: 'right',
+				// 2번 적용 풀페이지시 이걸로 적용 
+				// 풀페이지 아닐시 AOS.init();만 작성
+				scrollBar: true,
+		        afterRender: function(){
+		  			AOS.init();
+		        },
+				afterLoad:function(anchorslink,index){
+					console.log(anchorslink+", "+index);
+					if( index != 1){
+						$("#header").addClass("bg");
+					}else{
+						$("#header").removeClass("bg");
+					}
+
+					// if( index == 2){
+					// 	$("#page2 img.p2img2").addClass("moveOne");
+					// }else{
+					// 	$("#page2 img.p2img2").removeClass("moveOne");
+					// }
+
+					// if( index == 2){
+					// 	$("#page2 img.p2img2").addClass("moveOne");
+					// }else{
+					// 	$("#page2 img.p2img2").removeClass("moveOne");
+					// }
+				}
+
+		});
+	  	 $.fn.fullpage.setAllowScrolling(true);
+	$('.slick').slick({
+            centerMode: false,
+            //centerPadding: '20px',
+            slidesToShow: 4,
+            responsive: [
+              {
+                breakpoint: 1200,
+                settings: {
+                  arrows: false,
+                  //centerMode: true,
+                  centerPadding: '20px',
+                  slidesToShow: 3
+                }
+              },
+              {
+                breakpoint: 750,
+                settings: {
+                  arrows: false,
+                  //centerMode: true,
+                  centerPadding: '40px',
+                  slidesToShow: 2
+                }
+              }
+            ]
+          });
+		});
+	</script>
+</head>
+<body>
+	<!-- header -->
+	<header id="header" class="clearfix">
+		<h1>
+			<a href="#"><img src="images/PaulBassett/logo.png" alt=""></a>
+		</h1>
+		<nav class="nav">
+			<ul id="tMenu" class="clearfix">
+				<li data-menuanchor="a1pg"><a href="#a1pg"  class="active">HOME</a></li>
+				<li data-menuanchor="a2pg"><a href="#a2pg">ABOUT</a></li>
+				<li data-menuanchor="a3pg"><a href="#a3pg">QUALITY</a></li>
+				<li data-menuanchor="a4pg"><a href="#a4pg">MENU</a></li>
+				<li data-menuanchor="a5pg"><a href="#a5pg">SHOP</a></li>
+				<li data-menuanchor="a6pg"><a href="#a6pg">INSTA</a></li>
+			</ul>
+		</nav>
+		<div class="navbar-header">
+            <div class="toggle-button" id="toggle">
+                <span class="bar top"></span>
+                <span class="bar middle"></span>
+                <span class="bar bottom"></span>
+            </div>
+        </div>
+        <nav class="overlay" id="overlay">
+          <ul>
+            <li><a href="#">HOME</a></li>
+            <li><a href="#">ABOUT</a></li>
+            <li><a href="#">QUALITY</a></li>
+            <li><a href="#">MENU</a></li>
+            <li><a href="#">SHOP</a></li>
+            <li><a href="#">INSTA</a></li>
+          </ul>
+        </nav>
+	</header>
+
+
+
+	<!-- body -->
+	<div class="fullpage">
+		<div class="section" id="page1" data-anchor="a1pg">
+			<ul class="slider">
+				<li style="background-image:url('./images/PaulBassett/main_1.jpg')">
+					<div class="stxt">
+						<h1>Ice Flakes</h1>
+						<p>폴바셋리 선보이는 시원한 여름 디저트 빙수3종</p>
+						<img src="images/PaulBassett/mouse.png" alt="" class="mouse">
+						<span>SCROLL DOWN</span>
+					</div>
+				</li>
+				<li  style="background-image:url(./images/PaulBassett/main_2.jpg">
+					<div class="stxt">
+						<h1>Summer Frappe</h1>
+						<p>상큼, 달콤한 과일 프라페로 무더운 여름을 시원하게</p>
+						<img src="images/PaulBassett/mouse.png" alt="" class="mouse">
+						<span>SCROLL DOWN</span>
+					</div>
+				</li>
+			</ul>
+			<img src="images/PaulBassett/b1.png" alt="" class="sb1">
+			<img src="images/PaulBassett/b2.png" alt="" class="sb2">
+		</div>
+
+
+		<div class="section" id="page2" data-anchor="a2pg">
+			<div class="ptxt">
+				<h2>ABOUT</h2>
+				<p>WBC Champion Paul Bassett</p>
+			</div>
+			<div class="page">
+				<div class="about1">
+					<img src="images/PaulBassett/bassett3.jpg" alt="" class="aboutimg" data-aos="fade-right"data-aos-duration="500" data-aos-delay="500">
+				</div>
+				<div class="about2">
+					<img src="images/PaulBassett/p2img.jpg" alt=""
+					data-aos="fade-left"data-aos-duration="1000" data-aos-delay="1000">
+				</div>
+			</div>
+		</div>
+
+
+		<div class="section" id="page3" data-anchor="a3pg">
+			<div class="ptxt">
+				<h2 class="p3h2">VISION & MISSION</h2>
+				<p>맛있는 커피와 최고의 서비스로 다시 찾고 싶은 휴식공간이 되겠습니다</p>
+			</div>
+			<div class="page_3">
+				<div class="page_3box">
+				 <img src="images/PaulBassett/p2img4.jpg" alt="">
+				</div>
+				<div class="page3txt">
+					<h3>1. Seed of Happiness</h3>
+					<p>우리가 만드는 모든 제품과 서비스를 통해 우리는<br> 
+						고객의 하루를 행복하게 합니다. 하루 하루의<br>
+						행복이 쌓여 세상은 풍요로워지기에 우리는 바로<br>
+						그 행복을 만드는 씨앗입니다.
+					</p>		
+				</div>
+				<div class="page3txt">
+					<h3>2. Let's Sprout</h3>
+					<p>우리는 큰 꿈을 실현하기 위해 함께 합니다.<br>
+					 작은 씨앗이 껍질을 뚫고 싹을 틔워내 큰 나무가<br>
+					  되듯이, 우리는 매일 담대하게 성장하여 꿈을 이뤄냅니다.
+					</p>		
+				</div>
+				<div class="page3txt">
+					<h3>3. From Trust to Love</h3>
+					<p>우리의 작은 말과 행동 하나 하나가<br>
+					 곧 우리의 브랜드가 됩니다.<br>
+					  고객이 신뢰할 수 있는 품질을 바탕으로<br>
+					  사랑받는 브랜드, 존경받는 기업으로 거듭납니다. 
+					</p>		
+				</div>
+				<div class="page3sns">
+					
+				</div>
+			</div>
+		</div>
+
+
+		<div class="section" id="page4" data-anchor="a4pg">
+			<div class="ptxt">
+				<h2>MENU</h2>
+				<div class="span">
+				<span>ALL</span>
+				<span>HOT</span>
+				<span>COLD</span>
+				</div>
+			</div>
+			<div class="boxWrap">
+	          	<div class="slick">
+	              <div class="sBox">
+	                <img src="images/PaulBassett/mi1.jpg" alt="">
+	                <h3>Summer<br>Frappe </h3>
+	                <p>(S)7,000D원 (G)8,300원</p>
+	              </div>
+	              <div class="sBox">
+	                <img src="images/PaulBassett/mi2.jpg" alt="">
+	                <h3>FAUCHON<br>Iced Tea</h3>
+	                <p>(S)5,800D원 (G)6,300원</p>
+	              </div>
+	              <div class="sBox">
+	                <img src="images/PaulBassett/mi3.jpg" alt="">
+	                <h3>Blueberry<br>Sweet rice drink </h3>
+	                <p>(S)8,800D원 (G)9,300원</p>
+	              </div>
+	              <div class="sBox">
+	                <img src="images/PaulBassett/mi4.jpg" alt="">
+	                <h3>Watermelon<br>Juice</h3>
+	                <p>(S)4,900D원 (G)5,300원</p>
+	              </div>
+	                <div class="sBox">
+	                <img src="images/PaulBassett/mi1.jpg" alt="">
+	                <h3>Summer<br>Frappe </h3>
+	                <p>(S)7,000D원 (G)8,300원</p>
+	              </div>
+	              <div class="sBox">
+	                <img src="images/PaulBassett/mi2.jpg" alt="">
+	                <h3>FAUCHON<br>Iced Tea</h3>
+	                <p>(S)5,800D원 (G)6,300원</p>
+	              </div>
+	              <div class="sBox">
+	                <img src="images/PaulBassett/mi3.jpg" alt="">
+	                <h3>Blueberry<br>Sweet rice drink </h3>
+	                <p>(S)8,800D원 (G)9,300원</p>
+	              </div>
+	              <div class="sBox">
+	                <img src="images/PaulBassett/mi4.jpg" alt="">
+	                <h3>Watermelon<br>Juice</h3>
+	                <p>(S)4,900D원 (G)5,300원</p>
+	              </div>
+         	 </div>
+        </div>
+
+
+		</div>
+		<div class="section" id="page5" data-anchor="a5pg">
+		</div>
+		<div class="section" id="page6" data-anchor="a6pg">
+		</div>
+	</div>
+</body>
+</html>

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+	<meta charset="UTF-8">
+	<title>문서 제목</title>
+	<script>
+		function change(){
+			var text = document.getElementById("text");
+			text.style.color = "reser";
+			text.style.background = "pink";
+			alert("안녕하세요.\n	 \t 저는 \"송예슬\"입니다")
+			document.getElementByTagName("body")[0].style.background = "blue";
+		}
+
+		function reser(){
+			var text = document.getElementById("text");
+			text.style.color = "initial";
+			text.style.background = "initial";
+		}
+
+	</script>
+</head>
+<body>
+	<p id="text">안녕하세요</p>
+	<button type="button" onclick="change()">버튼</button>
+	<button type="button" onclick="reser()">버튼</button>
+</body>
+</html>

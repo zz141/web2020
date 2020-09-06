@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+	<meta charset="UTF-8">
+	<title>transform</title>
+	<link rel="stylesheet" href="../css/reset.css">
+	<style>
+		.boxwrap{width: 500px;height: 500px;background:orange; margin: 0 auto; position: relative;}
+		.box{width: 200px;height: 200px;background:skyblue; /*transform:translate(0px,0px) rotate(0deg) scale(1,1);*/
+			/*transform: translateX(-50%);*/
+			transform: translate(-50%,-50%);
+			left: 50%; top: 50%;
+			position: absolute; transition:0.3s;}
+		/*.box1{width: 100px;height: 100px;background:red; }*/
+		/*.boxwrap:hover .box{transform:translate(30px,30px) rotate(45deg) scale(1.5,1);}*/
+	</style>
+</head>
+<body>
+	<div class="boxwrap">
+		<div class="box"></div>
+		<div class="box1"></div>
+	</div>
+
+	<style>
+		.container{background-color:#cdcdcd;}
+		.conrents{width: 1000px; margin: 0 auto; padding: 30px 0;}
+		.conrents ul{}
+		.conrents ul li{float:left; width: 235px; margin-right: 20px; overflow:hidden;}
+		.conrents ul li:last-child{margin-right: 0;}
+		.conrents ul li img{ display: block; width: 100%; transition:0.2s;}
+
+		.conrents ul li:hover img{transform:scale(1.1) rotate(5deg); }
+	</style>
+	<div class="container">
+		<div class="conrents">
+			<ul class="clearfix">
+				<li><img src="../images/testimg.jpg" alt=""></li>
+				<li><img src="../images/testimg.jpg" alt=""></li>
+				<li><img src="../images/testimg.jpg" alt=""></li>
+				<li><img src="../images/testimg.jpg" alt=""></li>
+			</ul>
+		</div>
+	</div>
+</body>
+</html>

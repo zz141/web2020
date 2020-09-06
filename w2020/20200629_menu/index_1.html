@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+	<meta charset="UTF-8">
+	<title>슬이연습</title>
+	<link rel="stylesheet" href="css/reset.css">
+	<link rel="stylesheet" href="css/jquery.bxslider.css">
+	<script src="js/jquery-3.1.1.min.js"></script>
+	<script src="js/jquery.bxslider.js"></script>
+	<script>
+		$(document).ready(function(){
+			$(".slider").bxSlider();
+
+		});
+	</script>
+	<style>
+		.menu1{width: 1200px;height: 50px; background:skyblue;
+			margin: 0 auto; position: relative; z-index: 1;}
+		.menu1>ul>li{float:left; width: 240px; line-height:50px;_height: 50px;}
+		.menu1>ul>li>a{display: block;text-align: center;line-height: 50px;}
+		.menu1>ul>li:hover{background:pink;}
+		.menu1>ul>li>a:hover{color:white;}
+		
+		.menu1>ul>li:hover .smenu{display:block;}
+		.smenu>li{text-align: center; line-height: 35px;}
+
+		.smenu{display:none;background: #0f0;}
+		.smenu>li{text-align: center;line-height: 35px;}
+		.smenu>li:hover{background:skyblue;}
+		.smenu>li>a{display: block;}
+		/*.smenu>li>a{display: block;}*/
+		.smenu>li>a:hover{color:white;}
+		
+		.visual{height: 400px;}
+
+		.bx-wrapper {
+		    -moz-box-shadow: none;
+		    -webkit-box-shadow: none;
+		    box-shadow: none;
+		    border: 0 none;
+		}
+
+	</style>
+</head>
+<body>
+		<div class="menu1">
+			<ul class="clearfix">
+				<li><a href="#">MENU11</a>
+					<ul class="smenu">
+						<li><a href="#">smenu1</a></li>
+						<li><a href="#">smenu2</a></li>
+						<li><a href="#">smenu3</a></li>
+						<li><a href="#">smenu4</a></li>
+					</ul>
+				</li>
+				<li><a href="#">MENU12</a>
+					<ul class="smenu">
+						<li><a href="#">smenu1</a></li>
+						<li><a href="#">smenu2</a></li>
+						<li><a href="#">smenu3</a></li>
+						<li><a href="#">smenu4</a></li>
+					</ul>
+				</li>
+				<li><a href="#">MENU13</a>
+					<ul class="smenu">
+						<li><a href="#">smenu1</a></li>
+						<li><a href="#">smenu2</a></li>
+						<li><a href="#">smenu3</a></li>
+						<li><a href="#">smenu4</a></li>
+					</ul>
+				</li>
+				<li><a href="#">MENU14</a>
+					<ul class="smenu">
+						<li><a href="#">smenu1</a></li>
+						<li><a href="#">smenu2</a></li>
+						<li><a href="#">smenu3</a></li>
+						<li><a href="#">smenu4</a></li>
+					</ul>
+				</li>
+				<li><a href="#">MENU15</a>
+					<ul class="smenu">
+						<li><a href="#">smenu1</a></li>
+						<li><a href="#">smenu2</a></li>
+						<li><a href="#">smenu3</a></li>
+						<li><a href="#">smenu4</a></li>
+					</ul>
+				</li>
+			</ul>
+		</div>
+	<div class="visual">
+		<div class="slider">
+			<img src="images/pc01.jpg" alt="">
+			<img src="images/pc02.jpg" alt="">
+			<img src="images/pc03.jpg" alt="">
+		</div>
+	</div>
+</body>
+</html>
